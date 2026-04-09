@@ -1,9 +1,15 @@
 # EIP — Embedded Intelligence Package  
 
-##Proposed by: Richard Haberkern
-##Contact: rmhaberkern@gmail.com
+## Machine Readable Datasheets as a Firmware Contract for Automated Integration of Sensors, Wireless, MCUs, MPUs, and Embedded Hardware
 
-Free for evaluation. Commercial use requires permission. See LICENSE.md for more information.
+**Proposed by:** Richard Haberkern  
+**Contact:** rmhaberkern@gmail.com  
+
+*Free for evaluation. Commercial use requires permission. See `LICENSE.md` for more information.*
+
+---
+
+## Abstract
 
 This repository is a reference **EIP (Embedded Intelligence Package)** and it includes a Smart Pong hybrid controller example.
 
