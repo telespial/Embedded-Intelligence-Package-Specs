@@ -1,9 +1,8 @@
 # EIP — Embedded Intelligence Package  
-##Includes The Smart Pong AI Model Hybrid controller Reference Repository
 
 **Richard Haberkern**
 
-This repository is a reference **EIP (Embedded Intelligence Package)** for a Smart Pong hybrid controller.
+This repository is a reference **EIP (Embedded Intelligence Package)** and it includes a Smart Pong hybrid controller for reference.
 
 ## What EIP means
 
