@@ -1,6 +1,9 @@
 # EIP — Embedded Intelligence Package  
 
-**Developed by Richard Haberkern**
+Proposed by: Richard Haberkern
+Contact: rmhaberkern@gmail.com
+
+Free for evaluation. Commercial use requires permission. See LICENSE.md for more information.
 
 This repository is a reference **EIP (Embedded Intelligence Package)** and it includes a Smart Pong hybrid controller example.
 
