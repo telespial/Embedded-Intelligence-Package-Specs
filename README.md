@@ -1,7 +1,5 @@
 # EIP — Embedded Intelligence Package  
 
-## Machine Readable Datasheets as a Firmware Contract for Automated Integration of Sensors, Wireless, MCUs, MPUs, and Embedded Hardware
-
 **Proposed by:** Richard Haberkern  
 **Contact:** rmhaberkern@gmail.com  
 
