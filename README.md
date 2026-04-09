@@ -1,6 +1,6 @@
 # EIP — Embedded Intelligence Package  
 
-**Richard Haberkern**
+**Developed by Richard Haberkern**
 
 This repository is a reference **EIP (Embedded Intelligence Package)** and it includes a Smart Pong hybrid controller example.
 
