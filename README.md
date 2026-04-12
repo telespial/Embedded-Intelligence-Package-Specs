@@ -1,121 +1,61 @@
-# EIP - Embedded Intelligence Package  
+# Embedded Intelligence Package (EIP)
 
-**Proposed by:** Richard Haberkern  
-**Contact:** rmhaberkern@gmail.com  
+## A Standardized Package Format for Deployable Embedded AI Including Model Definition, Runtime Code, and Integration Guidance
 
-*Free for evaluation. Commercial use requires permission. See `LICENSE.md` for more information.*
+Proposed by: Richard Haberkern  
+Contact: rmhaberkern@gmail.com
 
----
+Free for evaluation. Commercial use requires permission. See license.md for more information.
+
+Part of the [EmbeddedX platform](https://github.com/telespial/EmbeddedX-Specs).
+
+* * *
 
 ## Abstract
 
-This repository is a reference **EIP (Embedded Intelligence Package)** and it includes a Smart Pong hybrid controller example.
+Embedded Intelligence Package (EIP) establishes a standardized package format for deployable embedded AI including model definition, runtime code, and integration guidance. It is intended to package the practical artifacts needed to move from specification and runtime design to usable deployment in an embedded project.
 
-## What EIP means
+EIP is intentionally positioned as a package-specification and reference-package layer. It sits closer to deployment than the pure contract repositories and makes that role explicit.
 
-**EIP = Embedded Intelligence Package**
+* * *
 
-An EIP is more than a model file. It is a deployable intelligence package that includes:
+## 1. Scope
 
-- machine-readable model contract
-- formal model datasheet
-- firmware integration guide
-- beginner-friendly quickstart
-- runtime source code
-- headers
-- working example project
+EIP may package:
 
-## Relationship to MRD and EIL
+* model artifacts
+* MDP-linked metadata
+* EIL-linked runtime integration assets
+* documentation for integration
+* deployment notes
+* validation summaries
+* package manifests
+* version and compatibility notes
 
-- **MRD** defines the hardware  
-- **EIP** delivers the intelligence package  
-- **EIL** is the runtime layer that executes intelligence safely inside the system
+* * *
 
-## Repository purpose
+## 2. Why EIP Matters
 
-This repository demonstrates how an EIP can be packaged in a consistent way for:
+Specifications alone are not enough when engineers need a deployable, inspectable bundle. EIP establishes a consistent packaging layer so deployable intelligence does not become an ad hoc folder of half-documented files.
 
-- internal use
-- customer delivery
-- IDE/plugin generation
-- future standardization
+* * *
 
-It is designed to help engineers with limited AI background integrate an embedded model correctly and safely.
+## 3. Relationship to Other Repositories
 
-## What this repo includes
+* [EmbeddedX-Specs](https://github.com/telespial/EmbeddedX-Specs) establishes the umbrella platform
+* [Machine-Readable-Datasheets-Specs](https://github.com/telespial/Machine-Readable-Datasheets-Specs) may shape hardware-facing deployment assumptions
+* [Model-Definition-Package-Specs](https://github.com/telespial/Model-Definition-Package-Specs) establishes model contract content that may be packaged
+* [Embedded-Intelligence-Layer-Specs](https://github.com/telespial/Embedded-Intelligence-Layer-Specs) establishes runtime integration expectations that may be packaged
+* [AI-Coding-Specification](https://github.com/telespial/AI-Coding-Specification) may generate artifacts that end up in an EIP
 
-### Documentation
-- `README.md`
-- `docs/MODEL_DATASHEET.md`
-- `docs/INTEGRATION_GUIDE.md`
-- `docs/ENGINEER_QUICKSTART.md`
-- `docs/EIP_STANDARD_OVERVIEW.md`
+* * *
 
-### Machine-readable spec
-- `eip/model.eil.json`
+## 4. Core Principle
 
-### Runtime code
-- `include/smart_pong_ai.h`
-- `src/smart_pong_ai.cpp`
-- `src/smart_pong_model_backend.cpp`
-- `src/smart_pong_persistence.cpp`
+A deployable package should be structured, inspectable, and explicit about what it contains.
 
-### Example code
-- `examples/full_smart_pong_example.cpp`
+* * *
 
-### Build support
-- `CMakeLists.txt`
+## License
 
-## What this example does
-
-This Smart Pong example includes the **full AI-side runtime path** and a **complete console Pong sample** for testing.
-
-It demonstrates:
-
-- feature construction
-- model prediction API
-- analytic intercept reference
-- confidence-gated blending
-- learning hooks
-- persistence helpers
-- a minimal Pong gameplay loop
-
-## Important note
-
-This repository includes a **complete reference example**, but it is still a **portable demo**, not a full commercial game engine.
-
-The included example uses:
-
-- a deterministic sample backend in place of a real TFLM/NPU model
-- console output instead of graphics rendering
-- simple paddle/ball physics
-
-That is intentional. It keeps the EIP understandable, testable, and easy to modify.
-
-## Build
-
-```bash
-mkdir build
-cd build
-cmake ..
-cmake --build .
-```
-
-Run:
-
-```bash
-./smart_pong_demo
-```
-
-## Why this matters
-
-Most embedded AI efforts stop at a model artifact.
-
-EIP packages go further by shipping:
-
-- the model contract
-- the runtime expectations
-- the safe usage rules
-- the code needed to integrate and test
-
-That is what makes embedded intelligence reusable and scalable.
+See `license.md`.

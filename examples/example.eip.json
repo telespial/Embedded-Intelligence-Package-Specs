@@ -1,0 +1,9 @@
+{
+  "package": "smart_pong_reference",
+  "model_ref": "adaptive_reasoning_demo",
+  "runtime_ref": "eil_advisory_runtime",
+  "docs": [
+    "integration.md",
+    "compatibility.md"
+  ]
+}
