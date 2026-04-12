@@ -46,7 +46,7 @@ Specifications alone are not enough when engineers need a deployable, inspectabl
 * [Machine-Readable-Datasheets-Specs](https://github.com/telespial/Machine-Readable-Datasheets-Specs) may shape hardware-facing deployment assumptions
 * [Model-Definition-Package-Specs](https://github.com/telespial/Model-Definition-Package-Specs) establishes model contract content that may be packaged
 * [Embedded-Intelligence-Layer-Specs](https://github.com/telespial/Embedded-Intelligence-Layer-Specs) establishes runtime integration expectations that may be packaged
-* [AI-Coding-Specification](https://github.com/telespial/AI-Coding-Specification) may generate artifacts that end up in an EIP
+* [AI-Integrated-Coding-System-Spec](https://github.com/telespial/AI-Integrated-Coding-System-Spec) may generate artifacts that end up in an EIP
 
 * * *
 
