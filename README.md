@@ -1,6 +1,6 @@
 # Embedded Intelligence Package (EIP)
 
-## A Standardized Package Specification for Deployable Embedded AI Including Model Definition, Runtime Assets, and Integration Guidance
+## Packaging for Deployable Embedded AI Artifacts
 
 Proposed by: Richard Haberkern  
 Contact: rmhaberkern@gmail.com
@@ -13,9 +13,9 @@ Part of the [EmbeddedX platform](https://github.com/telespial/EmbeddedX-Specs).
 
 ## Abstract
 
-Embedded Intelligence Package (EIP) is a standardized package specification for deployable embedded AI including model definition, runtime assets, and integration guidance. It is intended to package the practical artifacts needed to move from specification and runtime design to usable deployment in an embedded project.
+Embedded Intelligence Package (EIP) defines how to package deployable embedded AI artifacts, including model metadata, runtime assets, and integration guidance. It is meant to cover the files an engineer actually needs to move from a model definition to something usable in a project.
 
-EIP is intentionally positioned as a package-specification and reference-package layer. It sits closer to deployment than the pure contract repositories and makes that role explicit.
+EIP sits closer to deployment than the pure contract repositories and makes that role explicit.
 
 * * *
 
