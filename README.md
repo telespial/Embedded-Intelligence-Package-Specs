@@ -1,5 +1,7 @@
 # Embedded Intelligence Package (EIP)
 
+[← Back to EmbeddedX-Specs (canonical index)](https://github.com/telespial/EmbeddedX-Specs)
+
 ## Packaging for Deployable Embedded AI Artifacts
 
 Proposed by: Richard Haberkern  
