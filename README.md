@@ -64,4 +64,4 @@ A deployable package should be structured, inspectable, and explicit about what 
 
 ## License
 
-See [LICENSE.md](./LICENSE.md).
+See [LICENSE.md](./LICENSE.md)
