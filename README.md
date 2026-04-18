@@ -7,7 +7,7 @@
 Proposed by: Richard Haberkern  
 Contact: rmhaberkern@gmail.com
 
-Free for evaluation. Commercial use requires permission. See `license.md` for more information.
+Free for evaluation. Commercial use requires permission. See `LICENSE.md` for more information.
 
 Part of the **EmbeddedX specification family**.
 
@@ -64,4 +64,4 @@ A deployable package should be structured, inspectable, and explicit about what 
 
 ## License
 
-See `license.md`.
+See `LICENSE.md`.
