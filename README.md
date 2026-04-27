@@ -1,67 +1,83 @@
 # Embedded Intelligence Package (EIP)
 
-[← Back to EmbeddedX-Specs (canonical index)](https://github.com/telespial/EmbeddedX-Specs)
+Embedded Intelligence Package (`EIP`) defines the deployable package contract for EmbeddedX model systems.
 
-## Packaging for Deployable Embedded AI Artifacts
+It standardizes how an embedded model package describes:
+- model family
+- enabled inputs
+- enabled outputs
+- training metadata
+- generated artifacts
+- compatibility and runtime assumptions
 
-Proposed by: Richard Haberkern  
-Contact: rmhaberkern@gmail.com
+`EIP` is the package layer that sits between model definition and client-side generation/view/debug workflows.
 
-Free for evaluation. Commercial use requires permission. See [LICENSE.md](./LICENSE.md) for more information.
+## v1 Goals
 
-Part of the **EmbeddedX specification family**.
+Version `1` of the package contract is optimized for the first EmbeddedX client workflow:
+- up to `16` inputs
+- input and output wiring can be enabled or disabled explicitly
+- model-family-specific output contracts
+- generated artifact manifest for:
+  - C++ output
+  - datasheet-style output
+  - user-guide output
+- small embedded-focused model families
+- label-first, train-later workflow support
 
-**Canonical index:** start at `EmbeddedX-Specs`:
-https://github.com/telespial/EmbeddedX-Specs
+## Relationship To Other Specifications
 
-* * *
+- `EmbeddedX-Specs` — umbrella index
+- `MRD` — machine-readable hardware structure
+- `MRC` — connectivity structure
+- `MDP` — model definition contract
+- `EIL` / `EML` runtime concepts
+- `AICS` — code and workflow orchestration surface
 
-## Abstract
+Use `embedded-intelligence-layer` as the reference for editor/build/export UX.
+Use `codemaster` as the reference for schema discipline, manifest layout, and validation structure.
 
-Embedded Intelligence Package (EIP) defines how to package deployable embedded AI artifacts, including model metadata, runtime assets, and integration guidance. It is meant to cover the files an engineer actually needs to move from a model definition to something usable in a project.
+## Repository Layout
 
-EIP sits closer to deployment than the pure contract repositories and makes that role explicit.
+- `docs/overview.md` — scope and system role
+- `docs/package-contract-v1.md` — normative v1 package contract
+- `docs/starter-model-catalog.md` — first-release model families
+- `docs/generated-outputs.md` — required generated artifacts
+- `docs/manifest.md` — manifest rules
+- `docs/compatibility.md` — compatibility rules
+- `schemas/eip.package.schema.json` — v1 package schema
+- `examples/example.eip.json` — example package
 
-* * *
+## v1 Core Rules
 
-## 1. Scope
+An `EIP` package must:
+- declare a single selected model family
+- support up to `16` inputs
+- declare enable/disable wiring state for each input and output
+- describe generated outputs through an artifact manifest
+- carry enough metadata for the client GUI, generator, viewer, and debugger to consume the same package consistently
 
-EIP may package:
+## First-Release Starter Model Families
 
-* model artifacts
-* MDP-linked metadata
-* EIL-linked runtime integration assets
-* documentation for integration
-* deployment notes
-* validation summaries
-* package manifests
-* version and compatibility notes
-
-* * *
-
-## 2. Why EIP Matters
-
-Specifications alone are not enough when engineers need a deployable, inspectable bundle. EIP establishes a consistent packaging layer so deployable intelligence does not become an ad hoc folder of half-documented files.
-
-* * *
-
-## 3. Relationship to Other Specifications
-
-* **EmbeddedX (umbrella):** https://github.com/telespial/EmbeddedX-Specs
-* **MRD:** https://github.com/telespial/Machine-Readable-Datasheets-Specs
-* **MRC:** https://github.com/telespial/Machine-Readable-Connectivity-Specs
-* **MDP:** https://github.com/telespial/Model-Definition-Package-Specs
-* **EIL:** https://github.com/telespial/Embedded-Intelligence-Layer-Specs
-* **AICS:** https://github.com/telespial/AI-Coding-System-Specs
-
-* * *
-
-## 4. Core Principle
-
-A deployable package should be structured, inspectable, and explicit about what it contains.
-
-* * *
+- Linear:
+  - linear
+  - ridge
+  - lasso
+  - logistic
+- Tree-based:
+  - decision_tree
+  - random_forest
+  - gradient_boosting
+- Statistical / anomaly:
+  - z_score
+  - ewma
+  - gaussian
+  - isolation_forest
+- `naive_bayes`
+- `linear_svm`
+- `knn`
+- `small_mlp` for `MPU` / `NPU` targets
 
 ## License
 
-See [LICENSE.md](./LICENSE.md)
+See `LICENSE.md`.

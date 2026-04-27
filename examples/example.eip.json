@@ -1,9 +1,92 @@
 {
-  "package": "smart_pong_reference",
-  "model_ref": "adaptive_reasoning_demo",
-  "runtime_ref": "eil_advisory_runtime",
-  "docs": [
-    "integration.md",
-    "compatibility.md"
+  "packageId": "eml.smart_pong.z_score.v1",
+  "name": "smart_pong_reference",
+  "version": "1.0.0",
+  "schemaVersion": "1.0.0",
+  "createdUtc": "2026-04-26T18:00:00Z",
+  "model": {
+    "modelFamily": "z_score",
+    "modelCategory": "anomaly",
+    "targetClass": "MCU",
+    "parameterCount": 12,
+    "layerCount": 0
+  },
+  "inputs": [
+    {
+      "inputId": "ball_velocity_x",
+      "name": "Ball Velocity X",
+      "enabled": true,
+      "valueType": "numeric",
+      "semanticType": "kinematic_signal",
+      "unit": "px_per_frame",
+      "sourceChannel": "game.ball.vx"
+    },
+    {
+      "inputId": "ball_velocity_y",
+      "name": "Ball Velocity Y",
+      "enabled": true,
+      "valueType": "numeric",
+      "semanticType": "kinematic_signal",
+      "unit": "px_per_frame",
+      "sourceChannel": "game.ball.vy"
+    },
+    {
+      "inputId": "player_button_a",
+      "name": "Player Button A",
+      "enabled": false,
+      "valueType": "bit",
+      "semanticType": "user_control",
+      "unit": "bool",
+      "sourceChannel": "input.button.a"
+    }
+  ],
+  "outputs": [
+    {
+      "outputId": "anomaly_score",
+      "name": "Anomaly Score",
+      "enabled": true,
+      "valueType": "numeric",
+      "semanticRole": "anomaly_score"
+    },
+    {
+      "outputId": "alert_state",
+      "name": "Alert State",
+      "enabled": true,
+      "valueType": "enum",
+      "semanticRole": "alert_state"
+    },
+    {
+      "outputId": "reason_code",
+      "name": "Reason Code",
+      "enabled": true,
+      "valueType": "string",
+      "semanticRole": "reason_code"
+    }
+  ],
+  "training": {
+    "trainingMode": "labeled_historical",
+    "labelStrategy": "label_first",
+    "datasetSummary": "Structured labeled gameplay telemetry with stable environmental assumptions.",
+    "notes": "Starter anomaly package for embedded-friendly inference path."
+  },
+  "artifacts": [
+    {
+      "artifactId": "cpp_runtime",
+      "artifactType": "cpp",
+      "path": "generated_cpp/",
+      "required": true
+    },
+    {
+      "artifactId": "datasheet",
+      "artifactType": "datasheet",
+      "path": "docs/model_datasheet.md",
+      "required": true
+    },
+    {
+      "artifactId": "user_guide",
+      "artifactType": "user_guide",
+      "path": "docs/user_guide.md",
+      "required": true
+    }
   ]
 }

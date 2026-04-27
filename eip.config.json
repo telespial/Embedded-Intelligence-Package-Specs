@@ -1,5 +1,12 @@
 {
   "spec": "EIP",
   "full_name": "Embedded Intelligence Package",
-  "status": "Draft"
+  "status": "Draft",
+  "contract_version": "1.0.0",
+  "input_limit": 16,
+  "generated_outputs": [
+    "cpp",
+    "datasheet",
+    "user_guide"
+  ]
 }
