@@ -2,6 +2,15 @@
 
 Embedded Intelligence Package (`EIP`) defines the deployable package contract for EmbeddedX model systems.
 
+Proposed by: Richard Haberkern
+Contact: rmhaberkern@gmail.com
+
+Free for evaluation. Commercial use requires permission. See LICENSE.md for more information.
+
+Part of the EmbeddedX specification family.
+
+Canonical index: start at EmbeddedX-Specs: https://github.com/telespial/EmbeddedX-Specs
+
 It standardizes how an embedded model package describes:
 - model family
 - enabled inputs
